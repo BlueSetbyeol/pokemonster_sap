@@ -12,14 +12,14 @@ export default function Page() {
 		FetchPokemons().then((data) => setPokemons(data));
 	}, []);
 
-	console.log(pokemons);
 	return (
-		<>
-			<h1 className="p-10 items-center">Here : </h1>
-			<section className="inline-grid grid-cols-3 gap-7 items-center p-20">
+		<article className="w-[85vw] h-[80vh] flex flex-col items-center overflow-scroll">
+			<h1 className="mt-5 mb-2">Don't know what's your pokemon ?</h1>
+			<p>Look it up here : </p>
+			<section className="inline-grid grid-cols-5 gap-10 items-center m-5">
 				{pokemons !== undefined && pokemons !== null && pokemons.length > 0 ? (
 					pokemons.map((pokemon) => (
-						<section key={pokemon.id} className="flex">
+						<section key={pokemon.id} className="flex h-[16vh]">
 							<PokemonCard pokemon={pokemon} />
 						</section>
 					))
@@ -27,6 +27,6 @@ export default function Page() {
 					<p>oups</p>
 				)}
 			</section>
-		</>
+		</article>
 	);
 }

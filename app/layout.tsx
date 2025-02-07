@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Mulish, Wallpoet } from "next/font/google";
 import "./globals.css";
 import NavBar from "./UI/navBar";
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
+const mulish = Mulish({
+	variable: "--font-mulish",
 	subsets: ["latin"],
 });
-
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
+const wallpoet = Wallpoet({
+	variable: "--font-wallpoet",
 	subsets: ["latin"],
+	weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +26,9 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased w-[100vw] h-[100vh]`}
+				className={
+					"font-[family-name:var(--font-mulish)] antialiased w-[100vw] h-[100vh] bg-gray-950 text-white"
+				}
 			>
 				<section className="flex items-center justify-center">
 					<nav className="w-[15vw] h-[95vh]">
@@ -37,7 +39,7 @@ export default function RootLayout({
 							<img
 								src="https://cdn.pixabay.com/photo/2016/08/06/08/05/pokemon-1574006_1280.png"
 								alt="pika"
-								className="h-[11vh] mr-4"
+								className="h-[11vh] mr-4 text-xl"
 							/>
 							Welcome to SAP !
 						</div>
