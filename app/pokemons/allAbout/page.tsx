@@ -1,6 +1,6 @@
 "use client";
 
-import { FetchPokemon } from "@/app/lib/data";
+import { FetchPokemons } from "@/app/lib/data";
 import type { pokemonType } from "@/app/types/pokemonType";
 import PokemonCard from "@/app/UI/pokemonCard";
 import { useEffect, useState } from "react";
@@ -9,7 +9,7 @@ export default function Page() {
 	const [pokemons, setPokemons] = useState<pokemonType[] | null>(null);
 
 	useEffect(() => {
-		FetchPokemon().then((data) => setPokemons(data));
+		FetchPokemons().then((data) => setPokemons(data));
 	}, []);
 
 	console.log(pokemons);

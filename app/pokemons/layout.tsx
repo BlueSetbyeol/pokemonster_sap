@@ -1,6 +1,6 @@
 export default function Layout({ children }: { children: React.ReactNode }) {
 	return (
-		<div className="flex h-screen flex-row md:flex-col md:overflow">
+		<div className="flex flex-col items-center w-[85vw] h-[80vh] w-[85vw] h-[80vh] overflow">
 			{children}
 		</div>
 	);

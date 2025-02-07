@@ -1,6 +1,6 @@
 "use server";
 
-export async function FetchPokemon() {
+export async function FetchPokemons() {
 	try {
 		const response = await fetch(
 			"https://pokebuildapi.fr/api/v1/pokemon/limit/151",
