@@ -34,7 +34,7 @@ export default function RootLayout({
 					<nav className="w-[15vw] h-[95vh]">
 						<NavBar />
 					</nav>
-					<main className="w-[85vw] h-[95vh]">
+					<main className="w-[85vw] h-[97vh] md:h-[95vh]">
 						<div className="flex items-center justify-center h-15 shrink-0 items-end rounded-lg bg-red-700 m-4 md:h-20">
 							<img
 								src="https://cdn.pixabay.com/photo/2016/08/06/08/05/pokemon-1574006_1280.png"
@@ -46,7 +46,7 @@ export default function RootLayout({
 						{children}
 					</main>
 				</section>
-				<footer className="w-[100vw] h-[5vh] flex items-center justify-center bg-red-700 rounded">
+				<footer className="w-[100vw] h-[3vh] flex items-center justify-center bg-red-700 rounded md:h-[5vh]">
 					<p>Created with love and crazyness</p>
 				</footer>
 			</body>

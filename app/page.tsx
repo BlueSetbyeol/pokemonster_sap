@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default async function Home() {
 	return (
-		<section className="w-[85vw] h-[80vh] space-y-6 flex flex-col justify-around p-1">
+		<section className="w-[80vw] h-[81vh] ml-2 space-y-6 flex flex-col justify-around p-2 overflow-scroll md:w-[85vw] md:ml-0">
 			<h1 className="flex justify-center text-4xl font-[family-name:var(--font-wallpoet)]">
 				Welcome to our Safe Association for Pokemon
 			</h1>
-			<article className="flex flex-col gap-6 rounded-lg bg-gray-50 px-6 py-10 md:px-20">
+			<article className="flex flex-col gap-6 rounded-lg bg-gray-50 px-6 py-5 md:px-20 md:py-10">
 				<h2 className="text-red-700 text-lg italic font-[family-name:var(--font-mulish)]">
 					Where pokemons can be bought and sold, legally and in all concerns for
 					their safety and happiness !
@@ -24,17 +24,17 @@ export default async function Home() {
 					But first, let us guide you through a few guide lines.
 				</p>
 			</article>
-			<article className="flex flex-row justify-center items-end gap-6 h-[20vh]">
+			<article className="flex flex-row items-end gap-6 h-[20vh] px-6 py-2 md:px-20 md:justify-center">
 				<Link
 					key="selling"
-					className="rounded-xl bg-red-700 text-sm/7 text-white flex items-center justify-center h-[5vh] w-[12vw] ml-5 mt-5"
+					className="border-red-400 border-2 rounded-md mb-5 p-2 hover:bg-red-700 hover:border-white max-w-[30vw]"
 					href="/pokemons/selling"
 				>
 					Sell your pokemon
 				</Link>
 				<Link
 					key="buying"
-					className="rounded-xl bg-red-700 text-sm/7 text-white flex items-center justify-center h-[5vh] w-[12vw] ml-5 mt-5"
+					className="border-red-400 border-2 rounded-md mb-5 p-2 hover:bg-red-700 hover:border-white max-w-[30vw]"
 					href="/pokemons/buying"
 				>
 					Buy a new pokemon
