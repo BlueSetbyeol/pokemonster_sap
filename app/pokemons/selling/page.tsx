@@ -18,12 +18,14 @@ export default function Page() {
 				className="flex flex-col w-[35vw] h-[50vh] items-center justify-center gap-6 rounded-xl border-2 p-6"
 			>
 				<article className="flex flex-col gap-10 items-start justify-center w-[30vw]">
-					<title>Please submit the pokemon that you wish to sell :</title>
+					<p className="text-white">
+						Please submit the pokemon that you wish to sell :
+					</p>
 					<div className="gap-1">
 						<p>Pokemon's type :</p>
 						<select
 							name="type_of_pokemon"
-							className="rounded-md border-2 w-[28vw]"
+							className="rounded-md border-2 w-[28vw] font-[family-name:var(--font-mulish)] text-black"
 						>
 							<option value="">Drop the list</option>
 							{pokemons !== undefined &&
@@ -38,19 +40,19 @@ export default function Page() {
 						</select>
 					</div>
 					<label className="flex flex-col h-30">
-						Name of the pokemon
+						Name of the pokemon :
 						<input
 							type="text"
 							name="pokemon_name"
-							className="rounded-md border-2 w-[28vw]"
+							className="rounded-md border-2 w-[28vw] text-black"
 						/>
 					</label>
 					<label className="flex flex-col h-30">
-						Age of the pokemon
+						Age of the pokemon :
 						<input
 							type="number"
 							name="age"
-							className="rounded-md border-2 w-[28vw]"
+							className="rounded-md border-2 w-[28vw] text-black"
 						/>
 					</label>
 				</article>

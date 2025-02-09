@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function NavBar() {
 	return (
-		<section className="flex flex-col justify-center items-start">
+		<section className="flex flex-col justify-center items-start bg-grey-950 text-white">
 			<img
 				src="https://cdn.pixabay.com/photo/2016/12/16/02/34/pokemon-1910474_1280.png"
 				alt="SAP logo"
@@ -17,12 +17,12 @@ export default function NavBar() {
 					<Link
 						key={link.name}
 						href={link.href}
-						className="rounded-xl bg-white text-sm/7 text-gray-700 flex items-center justify-start h-[10vh] ml-5 mt-5"
+						className="rounded-xl bg-white text-sm/7 text-gray-700 flex items-center justify-start h-[10vh] w-[12vw] ml-5 mt-5"
 					>
 						<img
 							src={link.icon}
 							alt="icon"
-							className="size-[30px] rounded-full"
+							className="size-[30px] rounded-full ml-4"
 						/>
 						<p className="hidden ml-5 md:block">{link.name}</p>
 					</Link>
