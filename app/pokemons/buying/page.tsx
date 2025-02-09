@@ -1,9 +1,10 @@
 "use client";
 
 import PokemonCard from "@/app/UI/pokemonCard";
-import { fetchPokemonToBuy } from "@/app/lib/data";
+import { boughtPokemon, fetchPokemonToBuy } from "@/app/lib/data";
 import { FetchPokemon } from "@/app/lib/data";
 import type { pokemonType, pokemonToBuy } from "@/app/types/pokemonType";
+import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Page() {
@@ -26,6 +27,15 @@ export default function Page() {
 	useEffect(() => {
 		fetchPokemonToBuy().then((data) => setAvailablePokemons(data));
 	}, []);
+
+	const handleClickDelete = async (id: number) => {
+		boughtPokemon(id).then((data) => {
+			if (data || data === 0) {
+				alert("Thank you for your purchase !");
+				fetchPokemonToBuy().then((data) => setAvailablePokemons(data));
+			}
+		});
+	};
 
 	return (
 		<article className="w-[85vw] h-[80vh] flex flex-col items-center overflow-scroll">
@@ -63,6 +73,13 @@ export default function Page() {
 									<p>name : {pokemon.specific_info.name_pokemon}</p>
 									<p>age : {pokemon.specific_info.age_pokemon} years</p>
 								</div>
+								<button
+									type="button"
+									onClick={() => handleClickDelete(pokemon.specific_info.id)}
+									className="border-red-700"
+								>
+									Buy this pokemon
+								</button>
 							</article>
 						))}
 				</section>

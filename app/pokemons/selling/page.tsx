@@ -26,6 +26,9 @@ export default function Page() {
 			age_pokemon: pokemonAge,
 		}).then((data) => {
 			if (data || data === 0) {
+				alert(
+					"We are happy to welcome your Pokemon into our SAP list. Go and see all his new friends !",
+				);
 				redirect("/pokemons/buying");
 			}
 		});

@@ -67,11 +67,19 @@ export async function addSoldPokemon(
 	}
 }
 
-// export async function boughtPokemon(): Promise<pokemonToBuy> {
-// 	try {
-// 		const response = await fetch("http://localhost:3000/api/trading");
-// 	} catch (error) {
-// 		console.error("Database Error:", error);
-// 		throw new Error("Failed to add to the database.");
-// 	}
-// }
+export async function boughtPokemon(id: number): Promise<pokemonToBuy> {
+	console.log(id);
+	try {
+		const response = await fetch("http://localhost:3000/api/trading", {
+			method: "DELETE",
+			body: JSON.stringify({ id }),
+		});
+		console.log(response);
+		const data = await response.json();
+		console.log(data.insertId);
+		return data;
+	} catch (error) {
+		console.error("Database Error:", error);
+		throw new Error("Failed to add to the database.");
+	}
+}

@@ -2,7 +2,7 @@
 
 import { NextResponse, type NextRequest } from "next/server";
 import connectionDatabase from "@/app/lib/database";
-import type { pokemonToBuy, soldType } from "@/app/types/pokemonType";
+import type { soldType } from "@/app/types/pokemonType";
 import type { ResultSetHeader } from "mysql2";
 
 export async function GET(query: string, data: []) {

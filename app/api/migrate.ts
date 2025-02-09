@@ -1,8 +1,6 @@
 import "dotenv/config";
 
-import { NextResponse, NextRequest } from "next/server";
 import mysql from "mysql2/promise";
-import { GetDBSettings, IDBSettings } from "@/app/lib/utils-server";
 
 import fs from "node:fs";
 import path from "node:path";
