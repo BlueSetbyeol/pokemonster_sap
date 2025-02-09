@@ -8,7 +8,7 @@ export async function GET(request: Request) {
 	// this is going to be my JSON response
 
 	const results = {
-		message: "Hello World!",
+		message: "Hello Pokemon World!",
 	};
 
 	// response with the JSON object

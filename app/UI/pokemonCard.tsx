@@ -9,15 +9,18 @@ export default function PokemonCard({ pokemon }: pokemonCardProps) {
 		<>
 			{pokemon !== null && (
 				<article
-					className="rounded-lg bg-red-100 flex flex-col items-center w-[18vw] h-[10vh]"
+					className="flex flex-col items-end w-[18vw] h-[18vh] relative"
 					key={pokemon.id}
 				>
+					<div className="p-2 rounded-lg bg-red-100 w-[100%] h-[55%]">
+						{""}
+						<h2 className="text-black">{pokemon.name}</h2>
+					</div>
 					<img
 						src={pokemon.image}
 						alt={pokemon.name}
-						className="size-[150px] "
+						className="h-[100%] absolute"
 					/>
-					<h2 className="text-white">{pokemon.name}</h2>
 				</article>
 			)}
 		</>
