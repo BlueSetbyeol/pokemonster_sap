@@ -10,9 +10,33 @@
 	:root {
 		--background: #0a0a0a;
 		--foreground: #ededed;
+		--font-wallpoet: wallpoet;
+		--font-mulish: mulish;
 	}
 }
 
 body {
 	color: var(--foreground);
+}
+
+h1 {
+	font-family: var(--font-wallpoet);
+	font-size: 2.5em;
+}
+
+h2,
+h3 {
+	font-family: var(--font-wallpoet);
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+p {
+	font-family: var(--font-mulish);
 }
