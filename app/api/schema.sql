@@ -1,5 +1,5 @@
 CREATE Table pokemon_to_exchange(
-    id INT PRIMARY KEY NOT NULL,
+    id INT PRIMARY KEY autoNOT NULL,
     id_pokemon INT NOT NULL,
     name_pokemon VARCHAR(150) NOT NULL,
     age_pokemon INT

@@ -28,7 +28,7 @@ export default function Page() {
 	}, []);
 
 	return (
-		<>
+		<article className="w-[85vw] h-[80vh] flex flex-col items-center overflow-scroll">
 			<h1 className="m-5">Buy your new pokemon from our trusted provider !</h1>
 			<aside className="h-[25vh]">
 				<h2 className="flex justify-center mb-5">
@@ -50,23 +50,23 @@ export default function Page() {
 				<h2 className="flex justify-center items-center my-4">
 					Here is the list of pokemons available right now :
 				</h2>
-				<section className="flex flex-row justify-around w-[70vw]">
+				<section className="flex flex-row flex-wrap justify-around w-[60vw]">
 					{availablePokemons.length > 0 &&
 						availablePokemons.map((pokemon) => (
 							<article
-								key={pokemon.pokemon_info.id}
+								key={pokemon.general_info.id}
 								className="flex flex-col justify-center items-center"
 							>
-								<PokemonCard pokemon={pokemon.pokemon_info} />
+								<PokemonCard pokemon={pokemon.general_info} />
 								<div className="h-[10vh]">
 									<h3>Informations :</h3>
-									<p>name : {pokemon.pokemon_name},</p>
-									<p>age :{pokemon.pokemon_age}</p>
+									<p>name : {pokemon.specific_info.name_pokemon}</p>
+									<p>age : {pokemon.specific_info.age_pokemon} years</p>
 								</div>
 							</article>
 						))}
 				</section>
 			</section>
-		</>
+		</article>
 	);
 }
