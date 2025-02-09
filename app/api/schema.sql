@@ -1,3 +1,7 @@
+CREATE pokemonster;
+
+USE pokemonster;
+
 CREATE Table pokemon_to_exchange(
     id INT PRIMARY KEY autoNOT NULL,
     id_pokemon INT NOT NULL,

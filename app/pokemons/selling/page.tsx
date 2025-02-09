@@ -39,10 +39,10 @@ export default function Page() {
 			<h1 className="m-5">Sell your captured pokemons</h1>
 			<form
 				action="submit"
-				className="flex flex-col w-[35vw] h-[50vh] items-center justify-center gap-6 rounded-xl border-2 p-6"
+				className="flex flex-col w-[65vw] h-auto md:w-[35vw] h-[50vh] items-center justify-center gap-6 rounded-xl border-2 border-red-200 p-6"
 				onSubmit={handleSubmitForm}
 			>
-				<article className="flex flex-col gap-10 items-start justify-center w-[30vw]">
+				<article className="flex flex-col gap-10 items-start justify-center w-[50vw] md:w-[30vw]">
 					<p className="text-white">
 						Please submit the pokemon that you wish to sell :
 					</p>
@@ -50,7 +50,7 @@ export default function Page() {
 						<p>Pokemon's type :</p>
 						<select
 							name="type_of_pokemon"
-							className="rounded-md border-2 w-[28vw] font-[family-name:var(--font-mulish)] text-black"
+							className="rounded-md border-2 w-[48vw] md:w-[28vw] font-[family-name:var(--font-mulish)] text-black outline-red-700"
 							onChange={(e) => {
 								setChosenPokemon(e.target.value);
 							}}
@@ -74,7 +74,7 @@ export default function Page() {
 						<input
 							type="text"
 							name="pokemon_name"
-							className="rounded-md border-2 w-[28vw] text-black"
+							className="rounded-md border-2 w-[48vw] md:w-[28vw] text-black outline-red-700"
 							onChange={(e) => setPokemonName(e.target.value)}
 						/>
 					</label>
@@ -83,7 +83,7 @@ export default function Page() {
 						<input
 							type="number"
 							name="age"
-							className="rounded-md border-2 w-[28vw] text-black"
+							className="rounded-md border-2 w-[48vw] md:w-[28vw] text-black outline-red-700"
 							onChange={(e) => setAge(e.target.value)}
 						/>
 					</label>
@@ -91,7 +91,7 @@ export default function Page() {
 				<input
 					type="submit"
 					value="Submit"
-					className="rounded-xl bg-red-700  w-[15vw] h-10 mt-2"
+					className="border-red-400 border-2 rounded-md p-2 hover:bg-red-700 hover:border-white"
 				/>
 			</form>
 		</>

@@ -9,7 +9,7 @@ export default function PokemonCard({ pokemon }: pokemonCardProps) {
 		<>
 			{pokemon !== null && (
 				<article
-					className="flex flex-col items-end w-[18vw] h-[18vh] relative"
+					className="flex flex-col items-end w-[30vw] md:w-[18vw] h-[18vh] relative"
 					key={pokemon.id}
 				>
 					<div className="p-2 rounded-lg bg-red-100 w-[100%] h-[55%]">
