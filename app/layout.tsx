@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Mulish, Wallpoet } from "next/font/google";
 import "./globals.css";
+import { Mulish, Wallpoet } from "next/font/google";
 import NavBar from "./UI/navBar";
 
 const mulish = Mulish({
@@ -26,9 +26,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={
-					"font-[family-name:var(--font-mulish)] antialiased w-[100vw] h-[100vh] bg-gray-950 text-white"
-				}
+				className={`antialiased w-[100vw] h-[100vh] bg-gray-950 text-white ${mulish.variable} ${wallpoet.variable}`}
 			>
 				<section className="flex items-center justify-center">
 					<nav className="w-[15vw] h-[95vh]">

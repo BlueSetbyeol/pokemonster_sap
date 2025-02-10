@@ -19,7 +19,7 @@ export default function PokemonCard({ pokemon }: pokemonCardProps) {
 					<img
 						src={pokemon.image}
 						alt={pokemon.name}
-						className="h-[100%] absolute"
+						className="h-[100%] absolute mt-3"
 					/>
 				</article>
 			)}

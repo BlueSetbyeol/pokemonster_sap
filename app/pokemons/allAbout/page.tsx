@@ -24,7 +24,7 @@ export default function Page() {
 						</section>
 					))
 				) : (
-					<p>oups</p>
+					<p>Incoming : API is working hard to get you the content.</p>
 				)}
 			</section>
 		</article>
