@@ -45,8 +45,8 @@ export default function Page() {
 
 	return (
 		<>
-			<h1 className="m-5">Sell your captured pokemons</h1>
-			<section className="flex justify-around items-center">
+			<h1 className=" m-5">Sell your captured pokemons</h1>
+			<section className="flex justify-around items-center overflow-scroll">
 				<form
 					action="submit"
 					className="flex flex-col w-[65vw] h-auto md:w-[35vw] h-[50vh] items-center justify-center gap-6 rounded-xl border-2 border-red-200 p-6"

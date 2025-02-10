@@ -4,7 +4,6 @@ import PokemonCard from "@/app/UI/pokemonCard";
 import { boughtPokemon, fetchPokemonToBuy } from "@/app/lib/data";
 import { FetchPokemon } from "@/app/lib/data";
 import type { pokemonType, pokemonToBuy } from "@/app/types/pokemonType";
-import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Page() {
@@ -39,8 +38,10 @@ export default function Page() {
 
 	return (
 		<article className="w-[85vw] h-[80vh] flex flex-col items-center overflow-scroll">
-			<h1 className="m-5">Buy your new pokemon from our trusted provider !</h1>
-			<aside className="h-[25vh]">
+			<h1 className="m-5 text-3xl">
+				Buy your new pokemon from our trusted provider !
+			</h1>
+			<aside className="md:h-[25vh] h-[35vh]">
 				<h2 className="flex justify-center m-5">Here are our best sellers :</h2>
 				<section className="flex flex-row justify-around w-[70vw]">
 					{bestPokemons.length > 0 &&
