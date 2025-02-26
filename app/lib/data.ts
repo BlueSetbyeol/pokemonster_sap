@@ -30,7 +30,7 @@ export async function FetchPokemon(id: number): Promise<pokemonType> {
 
 export async function fetchPokemonToBuy(): Promise<pokemonToBuy[]> {
 	try {
-		const response = await fetch("http://localhost:3000/api/trading");
+		const response = await fetch("/api/trading");
 		const soldData: soldType[] = await response.json();
 
 		const pokeData: pokemonToBuy[] = [];
@@ -52,7 +52,7 @@ export async function addSoldPokemon(
 	request: Omit<soldType, "id">,
 ): Promise<number> {
 	try {
-		const response = await fetch("http://localhost:3000/api/trading", {
+		const response = await fetch("/api/trading", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -70,7 +70,7 @@ export async function addSoldPokemon(
 export async function boughtPokemon(id: number): Promise<pokemonToBuy> {
 	console.log(id);
 	try {
-		const response = await fetch("http://localhost:3000/api/trading", {
+		const response = await fetch("/api/trading", {
 			method: "DELETE",
 			body: JSON.stringify({ id }),
 		});

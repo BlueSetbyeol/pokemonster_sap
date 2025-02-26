@@ -5,11 +5,11 @@ import connectionDatabase from "@/app/lib/database";
 import type { soldType } from "@/app/types/pokemonType";
 import type { ResultSetHeader } from "mysql2";
 
-export async function GET(query: string, data: []) {
+export async function GET(req: NextRequest) {
 	try {
 		const connect = await connectionDatabase; //connection à la database
 		const sqlQuery = "SELECT * from pokemon_to_exchange";
-		const [result] = await connect.query(sqlQuery);
+		const [result] = await connect.query<ResultSetHeader>(sqlQuery);
 		return NextResponse.json(result);
 	} catch (error) {
 		console.log(error);
