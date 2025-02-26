@@ -3,7 +3,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import sql from "@/app/lib/database";
 import type { soldType } from "@/app/types/pokemonType";
-import type { ResultSetHeader } from "mysql2";
 
 export async function GET(req: NextRequest) {
 	try {

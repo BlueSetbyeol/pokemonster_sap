@@ -14,7 +14,6 @@ export default function PokemonInfo({ pokemon }: pokemonInfoProps) {
 						key={pokemon.id}
 					>
 						<div className="p-2 rounded-lg bg-red-100 w-[100%] h-[55%]">
-							{""}
 							<h2 className="text-black text-2xl">{pokemon.name}</h2>
 						</div>
 						<img

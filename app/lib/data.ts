@@ -5,7 +5,7 @@ import type { pokemonToBuy, pokemonType, soldType } from "../types/pokemonType";
 export async function FetchPokemons() {
 	try {
 		const response = await fetch(
-			"https://pokebuildapi.fr/api/v1/pokemon/limit/151",
+			"https://pokebuildapi.fr/api/v1/pokemon/limit/201",
 		);
 		const data = await response.json();
 		return data;
