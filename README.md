@@ -23,7 +23,7 @@ But if you are a newbie and needs a bit more informations on pokemons™, go and
 
 - First clone this repository : `git@github.com:BlueSetbyeol/pokemonster_sap.git`;
 - Following that, run `npm i` to install the dependencies;
-- In the repo, you will find two important files : schema.sql (to have some basic data samples for the db) and a .env.sample that is best to duplicate and complete with your preferences;
+- In the repo, you will find two important files : schema.sql [/app/api/schema.sql] (to have some basic data samples for the db) and a .env.sample that is best to duplicate and complete with your preferences;
 - Make sure, your db is running with those basic information;
 - Then run the development server: `npm run dev`;
 
