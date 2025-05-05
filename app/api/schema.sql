@@ -3,7 +3,7 @@ CREATE pokemonster;
 USE pokemonster;
 
 CREATE Table pokemon_to_exchange(
-    id INT PRIMARY KEY autoNOT NULL,
+    id INT PRIMARY KEY auto increment NOT NULL,
     id_pokemon INT NOT NULL,
     name_pokemon VARCHAR(150) NOT NULL,
     age_pokemon INT

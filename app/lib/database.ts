@@ -1,13 +1,5 @@
-const { DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME } = process.env;
+import postgres from "postgres";
 
-import mysql from "mysql2/promise";
+const sql = postgres(process.env.DATABASE_URL as string, { ssl: "require" }); // will use psql environment variables
 
-const connectionDatabase = mysql.createConnection({
-	host: DB_HOST,
-	port: Number.parseInt(DB_PORT as string),
-	user: DB_USER,
-	password: DB_PASSWORD,
-	database: DB_NAME,
-});
-
-export default connectionDatabase;
+export default sql;

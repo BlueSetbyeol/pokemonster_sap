@@ -14,6 +14,7 @@ export type pokemonType = {
 	};
 	image: string;
 	apiTypes: { name: string; image: string }[];
+	apiGeneration: number;
 };
 
 export type soldType = {
