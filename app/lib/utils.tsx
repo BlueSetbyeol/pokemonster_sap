@@ -25,4 +25,9 @@ export const links: linksType[] = [
 		href: "/pokemons/allAbout",
 		icon: "https://cdn.pixabay.com/photo/2016/07/13/08/31/pokemon-1513925_1280.jpg",
 	},
+	{
+		name: "Contact Us",
+		href: "/pokemons/contact",
+		icon: "https://img.icons8.com/?size=100&id=114083&format=png&color=000000",
+	},
 ];
