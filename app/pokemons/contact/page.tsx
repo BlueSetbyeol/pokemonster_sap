@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function contact() {
 	return (
 		<section className="w-[80vw] h-[81vh] ml-2 space-y-6 flex flex-col justify-around p-2 overflow-scroll md:w-[85vw] md:h-[80vh] md:ml-0">
@@ -15,7 +17,15 @@ export default function contact() {
 				</p>
 				<p className="text-black">
 					Just be careful not to hurt them. And if you need more information, go
-					to our "All About" page.
+					to{" "}
+					<Link
+						key="selling"
+						href="/pokemons/allAbout"
+						className="text-red-700 text-center w-[100%]"
+					>
+						All About Pokemons
+					</Link>
+					.
 				</p>
 			</article>
 			<article className="flex flex-col gap-6 rounded-lg bg-gray-50 px-6 py-5 md:px-20 md:py-10 overflow-scroll ">
@@ -28,9 +38,24 @@ export default function contact() {
 				</p>
 				<p className="text-black">
 					If not, we will be happy to care for them and find them a good home
-					later on. Do go and check out our "Selling" page.
+					later on. Do go and check out{" "}
+					<Link
+						key="selling"
+						href="/pokemons/selling"
+						className="text-red-700 text-center w-[100%]"
+					>
+						Selling
+					</Link>
+					.
 				</p>
 			</article>
+			<Link
+				key="selling"
+				className="border-red-400 border-2 rounded-md p-2 hover:bg-red-700 hover:border-white"
+				href="/pokemons/contact"
+			>
+				Contact Us
+			</Link>
 		</section>
 	);
 }

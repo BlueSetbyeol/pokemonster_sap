@@ -38,7 +38,7 @@ export default async function Home() {
 						✩ To report sigthing of a pokemon in a difficult position, please :
 					</li>
 					<Link
-						key="selling"
+						key="contact"
 						href="/pokemons/contact"
 						className="text-red-700 text-center w-[100%]"
 					>

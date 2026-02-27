@@ -1,5 +1,14 @@
-import postgres from "postgres";
+import { Pool } from "pg";
+import dotenv from "dotenv";
+dotenv.config();
 
-const sql = postgres(process.env.DATABASE_URL as string, { ssl: "require" }); // will use psql environment variables
+const connectionPool = new Pool({
+  connectionString: process.env.POSTGRES_URL,
+  user: process.env.POSTGRES_USER,
+  host: process.env.POSTGRES_HOST,
+  database: process.env.POSTGRES_DATABASE,
+  password: process.env.POSTGRES_PASSWORD,
+  port: 5432,
+});
 
-export default sql;
+export default connectionPool;
