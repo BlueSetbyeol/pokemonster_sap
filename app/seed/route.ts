@@ -4,7 +4,7 @@ import pokemonster from "@/app/lib/place-holder-data";
 async function seedPokemonster() {
   await connectionPool.query(`
     CREATE TABLE IF NOT EXISTS pokemon_to_exchange(
-    id INT PRIMARY KEY SERIAL NOT NULL,
+    id SERIAL PRIMARY KEY,
     id_pokemon INT NOT NULL,
     name_pokemon VARCHAR(150) NOT NULL,
     age_pokemon INT
