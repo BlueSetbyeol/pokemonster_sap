@@ -2,23 +2,6 @@ import connectionPool from "@/app/lib/database";
 import pokemonster from "@/app/lib/place-holder-data";
 
 async function seedPokemonster() {
-  console.log(
-    "POSTGRES_URL",
-    process.env.POSTGRES_URL,
-    "POSTGRES_USER",
-    process.env.POSTGRES_USER,
-    "POSTGRES_HOST",
-    process.env.POSTGRES_HOST,
-    "POSTGRES_DATABASE",
-    process.env.POSTGRES_DATABASE,
-    "POSTGRES_PASSWORD",
-    process.env.POSTGRES_PASSWORD,
-    "PORT",
-    process.env.PORT,
-  );
-
-  console.log("Hahaha");
-
   await connectionPool.query(`
     CREATE TABLE IF NOT EXISTS pokemon_to_exchange(
     id SERIAL PRIMARY KEY,
