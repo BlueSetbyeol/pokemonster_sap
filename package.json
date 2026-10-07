@@ -12,6 +12,7 @@
     "dotenv": "^16.4.7",
     "mysql2": "^3.12.0",
     "next": "^16.3.6",
+    "pokenode-ts": "^3.0.0",
     "postgres": "^3.4.5",
     "react": "^19.2.7",
     "react-dom": "^19.3.0"

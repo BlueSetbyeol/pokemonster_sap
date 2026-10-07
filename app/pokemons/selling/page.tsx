@@ -52,15 +52,15 @@ export default function Page() {
           className="flex flex-col w-[65vw] h-auto md:w-[35vw] md:h-[50vh] items-center justify-center gap-6 rounded-xl border-2 border-red-200 p-6"
           onSubmit={handleSubmitForm}
         >
-          <article className="flex flex-col gap-10 items-start justify-center w-[50vw] md:w-[30vw]">
-            <p className="text-white">
+          <article className="flex flex-col gap-3 items-start justify-center w-[50vw] md:w-[30vw]">
+            <p className="text-white pb-6">
               Please submit the pokemon that you wish to sell :
             </p>
             <div className="gap-1">
               <p>Pokemon's type :</p>
               <select
                 name="type_of_pokemon"
-                className="rounded-md border-2 w-[48vw] md:w-[28vw] font-(family-name:--font-mulish) text-black outline-red-700"
+                className="rounded-md border-2 w-[48vw] h-9 md:w-[28vw] font-(family-name:--font-mulish) text-black outline-red-700 bg-white"
                 onChange={(e) => {
                   setChosenPokemon(e.target.value);
                 }}
@@ -79,21 +79,21 @@ export default function Page() {
                 )}
               </select>
             </div>
-            <label className="flex flex-col h-30">
+            <label className="flex flex-col">
               Name of the pokemon :
               <input
                 type="text"
                 name="pokemon_name"
-                className="rounded-md border-2 w-[48vw] md:w-[28vw] text-black outline-red-700"
+                className="rounded-md border-2 w-[48vw] h-9 md:w-[28vw] text-black outline-red-700 bg-white"
                 onChange={(e) => setPokemonName(e.target.value)}
               />
             </label>
-            <label className="flex flex-col h-30">
+            <label className="flex flex-col">
               Age of the pokemon :
               <input
                 type="number"
                 name="age"
-                className="rounded-md border-2 w-[48vw] md:w-[28vw] text-black outline-red-700"
+                className="rounded-md border-2 w-[48vw] h-9 md:w-[28vw] text-black outline-red-700 bg-white"
                 onChange={(e) => setAge(e.target.value)}
               />
             </label>
@@ -101,7 +101,7 @@ export default function Page() {
           <input
             type="submit"
             value="Submit"
-            className="border-red-400 border-2 rounded-md p-2 hover:bg-red-700 hover:border-white"
+            className="border-red-400 border-2 rounded-md p-2 hover:bg-red-700 hover:border-white "
           />
         </form>
         <aside className="hidden md:block md:ml-6">
