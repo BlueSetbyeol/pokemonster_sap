@@ -4,11 +4,15 @@ import type { pokemonToBuy, pokemonType, soldType } from "../types/pokemonType";
 
 export async function FetchPokemons() {
   try {
-    const response = await fetch(
-      "https://pokeapi.co/api/v2/pokemon?limit=201&offset=0",
-    );
-    const data = await response.json();
-    return data;
+    const response = await fetch(`${process.env.URL}/api/pokewiki`);
+
+    if (!response.ok) {
+      throw new Error(`Request failed with status ${response.status}`);
+    }
+
+    const pokemons: pokemonType[] = await response.json();
+
+    return pokemons;
   } catch (error) {
     console.error("Database Error:", error);
     throw new Error("Failed to fetch pokemons' data.");
@@ -17,11 +21,15 @@ export async function FetchPokemons() {
 
 export async function FetchPokemon(id: number): Promise<pokemonType> {
   try {
-    const response = await fetch(
-      `https://pokebuildapi.fr/api/v1/pokemon/${id}`,
-    );
-    const data = await response.json();
-    return data;
+    const response = await fetch(`${process.env.URL}/api/pokewiki/${id}`);
+
+    if (!response.ok) {
+      throw new Error(`Request failed with status ${response.status}`);
+    }
+
+    const pokemon: pokemonType = await response.json();
+
+    return pokemon;
   } catch (error) {
     console.error("Database Error:", error);
     throw new Error("Failed to fetch pokemon's details.");

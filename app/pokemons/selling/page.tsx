@@ -14,6 +14,18 @@ export default function Page() {
   }, []);
 
   const [chosenPokemon, setChosenPokemon] = useState("");
+
+  const [showPokemon, setShowPokemon] = useState<pokemonType>();
+
+  useEffect(() => {
+    if (chosenPokemon) {
+      const idPokemon = Number(chosenPokemon);
+      FetchPokemon(idPokemon).then((data) => setShowPokemon(data));
+    }
+  }, [chosenPokemon]);
+
+  console.log(showPokemon);
+
   const [pokemonName, setPokemonName] = useState("");
   const [age, setAge] = useState("");
 
@@ -34,14 +46,6 @@ export default function Page() {
       }
     });
   };
-
-  const [showPokemon, setShowPokemon] = useState<pokemonType>();
-  useEffect(() => {
-    if (chosenPokemon) {
-      const idPokemon = Number(chosenPokemon);
-      FetchPokemon(idPokemon).then((data) => setShowPokemon(data));
-    }
-  }, [chosenPokemon]);
 
   return (
     <>
