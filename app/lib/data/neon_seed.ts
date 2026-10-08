@@ -1,6 +1,6 @@
 import { Pool } from "pg";
 import { readFileSync } from "node:fs";
-import { pokemonData } from "./app/types/pokemonType";
+import { pokemonData } from "../../types/pokemonType";
 
 const data: pokemonData = JSON.parse(
   readFileSync("./app/api/data/pokemons.json", "utf-8"),
@@ -73,12 +73,12 @@ async function main() {
           p.name,
           p.sprite,
           p.image,
-          p.stats.hp,
-          p.stats.attack,
-          p.stats.defense,
-          p.stats.special_attack,
-          p.stats.special_defense,
-          p.stats.speed,
+          p.hp,
+          p.attack,
+          p.defense,
+          p.special_attack,
+          p.special_defense,
+          p.speed,
           JSON.stringify(p.types),
           p.abilities,
           p.evolutionChainId,

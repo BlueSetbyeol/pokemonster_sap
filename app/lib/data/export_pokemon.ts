@@ -88,14 +88,12 @@ async function main() {
       name: p.name,
       sprite: p.sprites.front_default ?? null,
       image: p.sprites.other?.["official-artwork"]?.front_default ?? null,
-      stats: {
-        hp: stat("hp"),
-        attack: stat("attack"),
-        defense: stat("defense"),
-        special_attack: stat("special-attack"),
-        special_defense: stat("special-defense"),
-        speed: stat("speed"),
-      },
+      hp: stat("hp"),
+      attack: stat("attack"),
+      defense: stat("defense"),
+      special_attack: stat("special-attack"),
+      special_defense: stat("special-defense"),
+      speed: stat("speed"),
       types: await Promise.all(
         p.types.map(async (t) => ({
           name: t.type.name,
