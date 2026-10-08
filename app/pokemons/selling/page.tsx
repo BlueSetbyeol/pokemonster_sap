@@ -24,8 +24,6 @@ export default function Page() {
     }
   }, [chosenPokemon]);
 
-  console.log(showPokemon);
-
   const [pokemonName, setPokemonName] = useState("");
   const [age, setAge] = useState("");
 

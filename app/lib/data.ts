@@ -67,6 +67,11 @@ export async function addSoldPokemon(
       },
       body: JSON.stringify(request),
     });
+
+    if (!response.ok) {
+      throw new Error(`Request failed with status ${response.status}`);
+    }
+
     const data: number = await response.json();
     return data;
   } catch (error) {
@@ -82,9 +87,13 @@ export async function boughtPokemon(id: number): Promise<pokemonToBuy> {
       method: "DELETE",
       body: JSON.stringify({ id }),
     });
-    console.log(response);
+
+    if (!response.ok) {
+      throw new Error(`Request failed with status ${response.status}`);
+    }
+
     const data = await response.json();
-    console.log(data.insertId);
+
     return data;
   } catch (error) {
     console.error("Database Error:", error);

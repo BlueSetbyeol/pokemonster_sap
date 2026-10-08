@@ -44,25 +44,28 @@ export default function PokemonPopup({ pokeID }: pokemonInfoProps) {
             </h3>
             <p>Generation : {pokemon.evolutionChainId}</p>
             <p>Number in evolution : </p>
-            <article className="flex flex-row">
+            <article className="w-full">
               Type :
-              <div className="flex flex-col pl-1">
+              <div className="flex flex-col pl-1 w-full gap-2">
                 {pokemon.types.map((type) => (
-                  <>
-                    <p key={type.name}>{type.name}</p>
+                  <div
+                    key={type.name}
+                    className="flex flex-row justify-between w-full items-center"
+                  >
+                    <p>{type.name}</p>
                     {type.icon && (
                       <img src={type.icon} alt={type.name} className="h-20" />
                     )}
-                  </>
+                  </div>
                 ))}
               </div>
             </article>
-            <p>HP : {pokemon.stats.hp}</p>
-            <p>Strengh : {pokemon.stats.attack}</p>
-            <p>Defence : {pokemon.stats.defense}</p>
-            <p>Speed : {pokemon.stats.speed}</p>
-            <p>Special attack : {pokemon.stats.special_attack}</p>
-            <p>Special defense : {pokemon.stats.special_defense}</p>
+            <p>HP : {pokemon.hp}</p>
+            <p>Strengh : {pokemon.attack}</p>
+            <p>Defence : {pokemon.defense}</p>
+            <p>Speed : {pokemon.speed}</p>
+            <p>Special attack : {pokemon.special_attack}</p>
+            <p>Special defense : {pokemon.special_defense}</p>
           </article>
         </section>
       )}
